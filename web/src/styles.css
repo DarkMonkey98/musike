@@ -238,3 +238,15 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Forcibly keep the player volume layout visible at narrow window widths */
+@media (max-width: 1024px) {
+  div[class*="volume"],
+  span[class*="volume"],
+  .volume-slider,
+  [id*="volume"] {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
